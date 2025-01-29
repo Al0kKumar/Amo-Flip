@@ -1,9 +1,6 @@
 import Order from '../models/orderModel.js';
 
-// @desc     Create new order
-// @method   POST
-// @endpoint /api/v1/orders
-// @access   Private
+
 const addOrderItems = async (req, res, next) => {
   try {
     const {
@@ -51,10 +48,6 @@ const addOrderItems = async (req, res, next) => {
   }
 };
 
-// @desc     Get logged-in user orders
-// @method   GET
-// @endpoint /api/v1/orders/my-orders
-// @access   Private
 const getMyOrders = async (req, res, next) => {
   try {
     const orders = await Order.find({ user: req.user._id });

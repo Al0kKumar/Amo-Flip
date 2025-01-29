@@ -3,10 +3,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { generateToken } from '../utils/generateToken.js';
 import transporter from '../config/email.js';
-// @desc     Auth user & get token
-// @method   POST
-// @endpoint /api/users/login
-// @access   Public
+
 const loginUser = async (req, res, next) => {
   try {
     const { email, password } = req.body;

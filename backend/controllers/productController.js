@@ -55,10 +55,6 @@ const getTopProducts = async (req, res, next) => {
   }
 };
 
-// @desc     Fetch Single Product
-// @method   GET
-// @endpoint /api/v1/products/:id
-// @access   Public
 const getProduct = async (req, res, next) => {
   try {
     const { id: productId } = req.params;
@@ -75,10 +71,6 @@ const getProduct = async (req, res, next) => {
   }
 };
 
-// @desc     Create product
-// @method   POST
-// @endpoint /api/v1/products
-// @access   Private/Admin
 const createProduct = async (req, res, next) => {
   try {
     const { name, image, description, brand, category, price, countInStock } =
@@ -102,10 +94,6 @@ const createProduct = async (req, res, next) => {
   }
 };
 
-// @desc     Update product
-// @method   PUT
-// @endpoint /api/v1/products/:id
-// @access   Private/Admin
 const updateProduct = async (req, res, next) => {
   try {
     const { name, image, description, brand, category, price, countInStock } =
@@ -142,10 +130,6 @@ const updateProduct = async (req, res, next) => {
   }
 };
 
-// @desc    Delete product
-// @method   DELETE
-// @endpoint /api/v1/products/:id
-// @access   Admin
 const deleteProduct = async (req, res, next) => {
   try {
     const { id: productId } = req.params;

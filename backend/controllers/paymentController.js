@@ -36,6 +36,8 @@ const validate = (req, res) => {
     .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET)
     .update(`${razorpay_order_id}|${razorpay_payment_id}`)
     .digest('hex');
+
+    
   // console.log(generatedSignature, razorpay_signature);
 
   if (generatedSignature !== razorpay_signature) {
