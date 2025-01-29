@@ -10,6 +10,7 @@ import Meta from '../components/Meta';
 import ProfileForm from '../components/ProfileForm';
 import { addCurrency } from '../utils/addCurrency';
 
+
 const ProfilePage = () => {
   const { data: orders, isLoading, error } = useGetMyOrdersQuery();
   return (

@@ -12,6 +12,7 @@ import ProductCarousel from '../components/ProductCarousel';
 import ServerError from '../components/ServerError';
 import Meta from '../components/Meta';
 
+
 const HomePage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPage, setTotalPage] = useState(0);
